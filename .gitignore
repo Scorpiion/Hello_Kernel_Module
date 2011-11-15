@@ -1,9 +1,12 @@
 # File that git should ignore
 
+.tmp_versions
+
 *.ko
 *.o
 *.order
 *.symvers
-
-
+*.mod
+*.cmd
+*.mod.c
 
