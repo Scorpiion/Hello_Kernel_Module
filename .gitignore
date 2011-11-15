@@ -1,0 +1,9 @@
+# File that git should ignore
+
+*.ko
+*.o
+*.order
+*.symvers
+
+
+
