@@ -1,11 +1,14 @@
 obj-m += hello_kernel_module.o
 
-LINUX_HEADERS="/lib/modules/$(shell uname -r)/build"
+CROSS_ARCH="arm"
+CROSS_CC="arm-linux-gnueabi-"
 PWD=$(shell pwd)
+LINUX_HEADERS="${PWD}/Linux-headers"
 
 all:
-	make -C ${LINUX_HEADERS} M=${PWD} modules
+	make ARCH=${CROSS_ARCH} CROSS_COMPILE=${CROSS_CC} -C ${LINUX_HEADERS} M=${PWD} modules
 
 clean:
-	make -C ${LINUX_HEADERS} M=${PWD} clean
+	make ARCH=${CROSS_ARCH} CROSS_COMPILE=${CROSS_CC} -C ${LINUX_HEADERS} M=${PWD} clean
+
 
