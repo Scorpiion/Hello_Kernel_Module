@@ -1,5 +1,6 @@
 # File that git should ignore
 
+Linux-headers
 .tmp_versions
 Linux-headers
 
@@ -10,4 +11,6 @@ Linux-headers
 *.mod
 *.cmd
 *.mod.c
+*~
+
 
