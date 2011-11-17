@@ -1,7 +1,13 @@
 This is a hello world project for kernel development.
 
-Two branches exists:
-x86, for normal desktop development
-arm, has a modified Makefile for cross compilation (no cross development tool included)
+For native compilation just execute the standard makefile with:
 
+"make"
+
+For ARM cross compilation, first run the script to create headerfiles,
+(it will ask you for search way to a Linux kernel). Then you invoke the
+ARM makefile:
+
+"./createHeaderFiles.bash"
+"make -f Makefile.arm"
 
