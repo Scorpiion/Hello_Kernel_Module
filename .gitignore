@@ -1,6 +1,7 @@
 # File that git should ignore
 
 .tmp_versions
+Linux-headers
 
 *.ko
 *.o
